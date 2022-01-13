@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concentric circle</title>
+    <style>
+        #c1 {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            top: 50px;
+            left: 50px;
+            background-color: grey;
+            border-radius: 50%; 
+        }
+        #c2 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            top: 50px;
+            left: 50px;
+            background-color: blue;
+            border-radius: 50%;
+        }
+        #c3 {
+            position: relative;
+            height: 400px;
+            width: 400px;
+            margin-top: 20%;
+            margin-left: 30%;
+            background-color: red;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="c3" onclick="circleClick(this.id)">
+        c3
+        <div id="c2" onclick="circleClick(this.id)">
+            c2
+            <div id="c1" onclick="circleClick(this.id)">c1</div>
+        </div>
+    </div>
+</body>
+<script  type="text/javascript">
+    function circleClick(id){
+        event.stopPropagation();
+        alert("You Clicked Circle "+ id);
+    }
+</script>
+</html>

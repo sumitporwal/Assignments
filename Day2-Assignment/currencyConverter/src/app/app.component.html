@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div id="container">
+  <div id="d1">
+    <label>Amount: </label>
+    <input type="number" #amount value="{{amount1}}" placeholder="Please Enter Amount"/>
+    <select #from value="{{type1}}">
+      <option value="INR">Indian Rupee INR</option>
+      <option value="USD">US Dollar USD</option>
+      <option value="AUD">Australian Dollar AUD</option>
+      <option value="EUR">Euro EUR</option>
+      <option value="GBP">Pound Sterling GBP</option>
+    </select>
+    <select #to value="{{type2}}">
+      <option value="INR">Indian Rupee INR</option>
+      <option value="USD">US Dollar USD</option>
+      <option value="AUD">Australian Dollar AUD</option>
+      <option value="EUR">Euro EUR</option>
+      <option value="GBP">Pound Sterling GBP</option>
+    </select>
+  </div>
+  <div className="result">
+    <button (click)="convert(amount.value,from.value,to.value)">Convert</button>
+    <h2>Converted Amount:</h2>
+    <p>{{amount1}} {{type1}} = {{amount2.toFixed(2)}} {{type2}}</p>
+  </div>
+</div>    
+<app-footer></app-footer>
